@@ -1,0 +1,135 @@
+---
+title: "Dashboard"
+format:
+  html:
+    fig-width: 12
+    fig-height: 8
+---
+
+## 📊 Static Dashboard
+
+This page showcases the static dashboard I created in Module W10 using Quarto.  
+The goal of this dashboard is to communicate insights from my MSDM CEP project using clear visualizations and audience‑friendly storytelling.
+
+## Dashboard Code & Output
+
+Below is the embedded dashboard from my CEP project.
+
+# Load cleaned trust dataset
+```{r}
+library(tidyverse)
+
+path <- "~/Desktop/MEin3D CEP Project/MEin3D_TrustSurvey_CLEAN.csv"
+path_exp <- path.expand(path)
+file_exists <- file.exists(path_exp)
+dir_listing <- list.files(dirname(path_exp))
+
+trust_clean <- if (file_exists) {
+  readr::read_csv(path_exp)
+} else {
+  # diagnostic info returned so you can inspect why it's missing
+  list(path = path_exp, exists = file_exists, dir_listing = dir_listing,
+       hint = "Verify the filename, folder name, or use file.choose() to select the file.")
+}
+trust_clean
+```
+
+# Lookup table: trust item → full question text
+```{r}
+trust_labels <- tibble(
+  item = paste0("trust_", 1:10),
+  question = c(
+    "I find the email content to be authentic.",
+    "The email content is transparent about how my data is used.",
+    "I feel comfortable sharing my data for personalized emails.",
+    "The email content is relevant to my interests.",
+    "I trust the source of the email content.",
+    "The email content is accurate and reliable.",
+    "I feel that the email respects my privacy.",
+    "The email content is engaging and well‑crafted.",
+    "I would be likely to click on links in this email.",
+    "Overall, I trust the information in this email."
+  )
+)
+```
+
+# Summaries for visualization
+
+```{r}
+trust_summary <- trust_clean %>%
+group_by(condition) %>%
+summarize(avg_trust = mean(trust_score_avg, na.rm = TRUE))
+```
+
+# 📊 Trust by Email Condition
+```{r, fig.width=12, fig.height=10}
+
+ggplot(trust_summary, aes(x = condition, y = avg_trust, fill = condition)) +
+  geom_col(width = 0.6, show.legend = FALSE) +
+  geom_text(aes(label = round(avg_trust, 2)), vjust = -0.5, size = 5) +
+  labs(
+    title = "AI‑Personalized Emails Generate Higher Trust",
+    subtitle = "Average trust score across 10 Likert-scale items",
+    x = "",
+    y = "Average Trust Score (1–5)"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold")
+  )
+```
+
+::: callout-note
+Insight
+AI‑personalized emails produced the highest average trust score, indicating that customers perceive AI‑generated content as slightly more trustworthy than the control email.
+:::
+
+## 📊 Trust Item for Second Visualization
+```{r}
+trust_items_long <- trust_clean %>%
+  select(condition, starts_with("trust_")) %>%
+  pivot_longer(cols = starts_with("trust_"), names_to = "item", values_to = "score") %>%
+  left_join(trust_labels, by = "item")
+```
+
+# 📊 Trust Item Breakdown
+```{r, fig.width=12, fig.height=10}
+
+# Compute mean scores per question + condition
+trust_items_summary <- trust_items_long %>%
+  group_by(question, condition) %>%
+  summarize(mean_score = mean(score, na.rm = TRUE), .groups = "drop")
+
+# Plot with labels
+ggplot(trust_items_summary, aes(x = question, y = mean_score, fill = condition)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.7) +
+  geom_text(
+    aes(label = round(mean_score, 2)),
+    position = position_dodge(width = 0.8),
+    hjust = -0.1,
+    size = 4
+  ) +
+  coord_flip() +
+  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 40)) +
+  labs(
+    title = "Trust Item Breakdown by Condition",
+    subtitle = "Average score for each trust dimension",
+    x = "Trust Question",
+    y = "Average Score (1–5)"
+  ) +
+  theme_minimal(base_size = 14) +
+  xlim(rev(levels(factor(trust_items_summary$question))))  # keeps order clean
+```
+
+::: callout-tip
+Insight
+Across all 10 trust dimensions — including authenticity, transparency, and data comfort — the AI‑personalized email consistently performs as well as or better than the control email.
+:::
+
+## 📝 Executive Summary - What This Means for MEin3D
+
+::: callout-success-tip
+The dashboard shows that AI‑generated email content performs on par with human‑written messaging in terms of trust. Customers rate both emails as similarly trustworthy, meaning MEin3D can safely adopt AI‑powered personalization without risking customer confidence. This supports shifting toward automated, scalable email workflows that reduce production time while maintaining strong customer perception.
+:::

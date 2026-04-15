@@ -1,0 +1,33 @@
+---
+title: "Welcome"
+format: html
+---
+
+# 🌸 Hi, I'm Krystal
+
+<div style="text-align:center;">
+  <img src="krystal.2.png" class="profile-pic">
+</div>
+
+Welcome to my Module 10 website for MSDM. I am a Digital Marketing Master’s student at Cal Poly Pomona with a passion for blending creativity, analytics, and audience engagement.
+
+## Career Aspirations
+
+I am pursuing a career in **integrated marketing within the sports and entertainment industry**, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences.
+
+## Background & Experience
+
+I bring hands‑on experience across marketing, events, and customer engagement, including:
+
+- Event operations at the **Rose Bowl Stadium**
+- Aquatics marketing & HR support at the **Rose Bowl Aquatics Center**
+- Brand ambassador campaigns for **Farmer John** and **Disney x Brooks**
+- Digital marketing analytics and GA4 reporting
+- Creative content development and presentation design
+
+I enjoy turning insights into strategy and crafting meaningful experiences for audiences.
+
+## Let’s Connect
+
+[<i class="bi bi-linkedin"></i> Connect on LinkedIn](https://www.linkedin.com/in/krystal-lee-37992b233)  
+[<i class="bi bi-envelope-fill"></i> Email Me](mailto:krystallovelee15@gmail.com)
