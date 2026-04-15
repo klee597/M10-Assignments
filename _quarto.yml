@@ -5,9 +5,9 @@ website:
   title: "Krystal's M10 Website"
   navbar:
     left:
-      - href: home.qmd
+      - href: index.qmd
         text: Home
-      - href: "W10 Dashboards Assignment.qmd"
+      - href: "Lee, Krystal-W10 Dashboards Assignment.qmd"
         text: "W10 Dashboards Assignment"
       - href: dashboard.qmd
         text: Dashboard
