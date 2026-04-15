@@ -1,82 +1,5 @@
 [
   {
-    "objectID": "home.html",
-    "href": "home.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome to my Module 10 website for MSDM. I am a Digital Marketing Master’s student at Cal Poly Pomona with a passion for blending creativity, analytics, and audience engagement.\n\n\nI am pursuing a career in integrated marketing within the sports and entertainment industry, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences.\n\n\n\nI bring hands‑on experience across marketing, events, and customer engagement, including:\n\nEvent operations at the Rose Bowl Stadium\nAquatics marketing & HR support at the Rose Bowl Aquatics Center\nBrand ambassador campaigns for Farmer John and Disney x Brooks\nDigital marketing analytics and GA4 reporting\nCreative content development and presentation design\n\nI enjoy turning insights into strategy and crafting meaningful experiences for audiences.\n\n\n\n Connect on LinkedIn\n Email Me"
-  },
-  {
-    "objectID": "home.html#career-aspirations",
-    "href": "home.html#career-aspirations",
-    "title": "Welcome",
-    "section": "",
-    "text": "I am pursuing a career in integrated marketing within the sports and entertainment industry, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences."
-  },
-  {
-    "objectID": "home.html#background-experience",
-    "href": "home.html#background-experience",
-    "title": "Welcome",
-    "section": "",
-    "text": "I bring hands‑on experience across marketing, events, and customer engagement, including:\n\nEvent operations at the Rose Bowl Stadium\nAquatics marketing & HR support at the Rose Bowl Aquatics Center\nBrand ambassador campaigns for Farmer John and Disney x Brooks\nDigital marketing analytics and GA4 reporting\nCreative content development and presentation design\n\nI enjoy turning insights into strategy and crafting meaningful experiences for audiences."
-  },
-  {
-    "objectID": "home.html#lets-connect",
-    "href": "home.html#lets-connect",
-    "title": "Welcome",
-    "section": "",
-    "text": "Connect on LinkedIn\n Email Me"
-  },
-  {
-    "objectID": "dashboard.html",
-    "href": "dashboard.html",
-    "title": "Dashboard",
-    "section": "",
-    "text": "This page showcases the static dashboard I created in Module W10 using Quarto.\nThe goal of this dashboard is to communicate insights from my MSDM CEP project using clear visualizations and audience‑friendly storytelling."
-  },
-  {
-    "objectID": "shiny-essay.html",
-    "href": "shiny-essay.html",
-    "title": "Essay on Shiny Apps",
-    "section": "",
-    "text": "Shiny is an R package that allows analysts and marketers to build interactive web applications directly from R. Unlike static dashboards, Shiny apps let users explore data dynamically through filters, inputs, and real‑time updates.\n\n\nA Shiny app has two main components:\n\n\nDefines what the user sees:\n\nDropdown menus\n\nSliders\n\nPlots\n\nTables\n\nText outputs\n\n\n\n\nDefines how the app responds:\n\nReads user inputs\n\nRuns R code dynamically\n\nUpdates visualizations in real time\n\nTogether, the UI and server create an interactive experience without requiring JavaScript or web development skills."
-  },
-  {
-    "objectID": "shiny-essay.html#what-is-a-shiny-app",
-    "href": "shiny-essay.html#what-is-a-shiny-app",
-    "title": "Essay on Shiny Apps",
-    "section": "",
-    "text": "A Shiny app has two main components:\n\n\nDefines what the user sees:\n\nDropdown menus\n\nSliders\n\nPlots\n\nTables\n\nText outputs\n\n\n\n\nDefines how the app responds:\n\nReads user inputs\n\nRuns R code dynamically\n\nUpdates visualizations in real time\n\nTogether, the UI and server create an interactive experience without requiring JavaScript or web development skills."
-  },
-  {
-    "objectID": "shiny-essay.html#summary",
-    "href": "shiny-essay.html#summary",
-    "title": "Essay on Shiny Apps",
-    "section": "Summary",
-    "text": "Summary\nShiny apps are ideal when: - You want interactivity - Your audience needs to explore data - You want to build tools without learning JavaScript\nThey are a key skill for modern data‑driven marketing teams."
-  },
-  {
-    "objectID": "dashboard.html#dashboard-overview",
-    "href": "dashboard.html#dashboard-overview",
-    "title": "Dashboard",
-    "section": "",
-    "text": "The dashboard highlights:\n\nKey performance metrics\n\nTrends and comparisons\n\nVisual summaries designed for non‑technical audiences\n\nInsights that support data‑driven decision‑making"
-  },
-  {
-    "objectID": "dashboard.html#dashboard-code-output",
-    "href": "dashboard.html#dashboard-code-output",
-    "title": "Dashboard",
-    "section": "Dashboard Code & Output",
-    "text": "Dashboard Code & Output\nBelow is the embedded dashboard from my CEP project."
-  },
-  {
-    "objectID": "dashboard.html#reflection",
-    "href": "dashboard.html#reflection",
-    "title": "Dashboard",
-    "section": "",
-    "text": "Creating this dashboard helped me practice: - Structuring insights for clarity - Designing visuals that support storytelling - Communicating findings to a non‑technical audience\nThis aligns with my career goal of working in integrated marketing within sports and entertainment, where clear communication and data‑driven insights are essential."
-  },
-  {
     "objectID": "shinylive.html",
     "href": "shinylive.html",
     "title": "Essay on Shinylive",
@@ -96,139 +19,6 @@
     "title": "Essay on Shinylive",
     "section": "❗ Cons of Shinylive",
     "text": "❗ Cons of Shinylive\n\nNot ideal for large datasets\n\nBrowser memory limits\n\nSlower for heavy computations\n\nFewer UI customization options"
-  },
-  {
-    "objectID": "dashboard.html#static-dashboard",
-    "href": "dashboard.html#static-dashboard",
-    "title": "Dashboard",
-    "section": "",
-    "text": "This page showcases the static dashboard I created in Module W10 using Quarto.\nThe goal of this dashboard is to communicate insights from my MSDM CEP project using clear visualizations and audience‑friendly storytelling."
-  },
-  {
-    "objectID": "dashboard.html#trust-item-breakdown",
-    "href": "dashboard.html#trust-item-breakdown",
-    "title": "Dashboard",
-    "section": "📊 Trust Item Breakdown",
-    "text": "📊 Trust Item Breakdown\n\ntrust_items_long &lt;- trust_clean %&gt;%\n  select(condition, starts_with(\"trust_\")) %&gt;%\n  pivot_longer(cols = starts_with(\"trust_\"), names_to = \"item\", values_to = \"score\")\n\nggplot(trust_items_long, aes(x = item, y = score, fill = condition)) +\n  stat_summary(fun = \"mean\", geom = \"col\", position = \"dodge\") +\n  coord_flip() +\n  labs(\n    title = \"Trust Item Breakdown by Condition\",\n    subtitle = \"Average score for each trust dimension\",\n    x = \"Trust Item\",\n    y = \"Average Score (1–5)\"\n  ) +\n  theme_minimal(base_size = 14)\n\nWarning: Removed 23 rows containing non-finite outside the scale range\n(`stat_summary()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nInsight Across all 10 trust dimensions — including authenticity, transparency, and data comfort — the AI‑personalized email consistently performs as well as or better than the control email."
-  },
-  {
-    "objectID": "dashboard.html#executive-summary---what-this-means-for-mein3d",
-    "href": "dashboard.html#executive-summary---what-this-means-for-mein3d",
-    "title": "Dashboard",
-    "section": "📝 Executive Summary - What This Means for MEin3D",
-    "text": "📝 Executive Summary - What This Means for MEin3D\n\nThe dashboard shows that AI‑generated email content performs on par with human‑written messaging in terms of trust. Customers rate both emails as similarly trustworthy, meaning MEin3D can safely adopt AI‑powered personalization without risking customer confidence. This supports shifting toward automated, scalable email workflows that reduce production time while maintaining strong customer perception."
-  },
-  {
-    "objectID": "dashboard.html#trust-item-for-second-visualization",
-    "href": "dashboard.html#trust-item-for-second-visualization",
-    "title": "Dashboard",
-    "section": "📊 Trust Item for Second Visualization",
-    "text": "📊 Trust Item for Second Visualization\n\ntrust_items_long &lt;- trust_clean %&gt;%\n  select(condition, starts_with(\"trust_\")) %&gt;%\n  pivot_longer(cols = starts_with(\"trust_\"), names_to = \"item\", values_to = \"score\") %&gt;%\n  left_join(trust_labels, by = \"item\")"
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "The goal of this project was to create a static dashboard using Quarto that communicates insights from my MEin3D Culminating Experience Project. I focused on understanding how consumers perceive trust in AI‑generated versus human‑written email content. The dashboard presents a clear narrative supported by visualizations that summarize trust scores across ten Likert‑scale items.\n\n\n\nThe dataset used for this dashboard is the MEin3D Trust Survey, which includes 130 responses. Participants were randomly assigned to one of two conditions:\n\nAI‑personalized email\nControl (human‑written) email\n\nEach participant rated ten trust‑related statements on a 1–5 Likert scale.\nA composite trust score was also calculated.\n\n\n\nBelow is the full code used to generate the static dashboard.\nThis code is shown in an unexecuted chunk, as required.\n\n\nCode\n# Load cleaned trust dataset\nlibrary(tidyverse)\n\ntrust_clean &lt;- read_csv(\"~/Desktop/MEin3D CEP Project/MEin3D_TrustSurvey_CLEAN.csv\")\n\n# Lookup table: trust item → full question text\ntrust_labels &lt;- tibble(\n  item = c(\"trust_1\",\"trust_2\",\"trust_3\",\"trust_4\",\"trust_5\",\n           \"trust_6\",\"trust_7\",\"trust_8\",\"trust_9\",\"trust_10\"),\n  question = c(\n    \"I trust this brand.\",\n    \"This email feels genuine.\",\n    \"This email shows that the brand understands my needs.\",\n    \"The information in this email feels accurate and reliable.\",\n    \"I feel comfortable with how this brand uses my data in this email.\",\n    \"This email is transparent about why I am receiving it.\",\n    \"This email makes me feel valued as a customer.\",\n    \"I believe this brand uses my information responsibly.\",\n    \"This email increases my confidence in this brand.\",\n    \"I would be willing to receive more emails like this from the brand.\"\n  )\n)\n\n# Summaries for visualization\ntrust_summary &lt;- trust_clean %&gt;%\n  group_by(condition) %&gt;%\n  summarize(avg_trust = mean(trust_score_avg, na.rm = TRUE))\n\n# Prepare trust items for second visualization\ntrust_items_long &lt;- trust_clean %&gt;%\n  select(condition, starts_with(\"trust_\")) %&gt;%\n  pivot_longer(cols = starts_with(\"trust_\"), names_to = \"item\", values_to = \"score\") %&gt;%\n  left_join(trust_labels, by = \"item\")\n\n# Plotting code omitted for brevity in this report\n\n\n\n\n\nThe static dashboard revealed several key insights: AI‑personalized emails produced slightly higher average trust scores than the control email. Across all ten trust dimensions, AI‑generated content performed as well as or better than human‑written content. Participants consistently rated the AI email as transparent, accurate, and respectful of their data.\n\n\n\nThe results suggest that consumers are comfortable with AI‑generated email content and do not perceive it as less trustworthy than human‑written messaging. This supports MEin3D’s strategy to scale personalized communication using AI without risking customer trust.\n\n\n\nhttps://klee597.github.io/M10/"
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#project-description",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#project-description",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "The goal of this project was to create a static dashboard using Quarto that communicates insights from my MEin3D Culminating Experience Project. I focused on understanding how consumers perceive trust in AI‑generated versus human‑written email content. The dashboard presents a clear narrative supported by visualizations that summarize trust scores across ten Likert‑scale items."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#data-description",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#data-description",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "The dataset used for this dashboard is the MEin3D Trust Survey, which includes 130 responses. Participants were randomly assigned to one of two conditions:\n\nAI‑personalized email\nControl (human‑written) email\n\nEach participant rated ten trust‑related statements on a 1–5 Likert scale.\nA composite trust score was also calculated."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#r-code-static-dashboard",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#r-code-static-dashboard",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "Below is the full code used to generate the static dashboard.\nThis code is shown in an unexecuted chunk, as required.\n\n\nCode\n# Load cleaned trust dataset\nlibrary(tidyverse)\n\ntrust_clean &lt;- read_csv(\"~/Desktop/MEin3D CEP Project/MEin3D_TrustSurvey_CLEAN.csv\")\n\n# Lookup table: trust item → full question text\ntrust_labels &lt;- tibble(\n  item = c(\"trust_1\",\"trust_2\",\"trust_3\",\"trust_4\",\"trust_5\",\n           \"trust_6\",\"trust_7\",\"trust_8\",\"trust_9\",\"trust_10\"),\n  question = c(\n    \"I trust this brand.\",\n    \"This email feels genuine.\",\n    \"This email shows that the brand understands my needs.\",\n    \"The information in this email feels accurate and reliable.\",\n    \"I feel comfortable with how this brand uses my data in this email.\",\n    \"This email is transparent about why I am receiving it.\",\n    \"This email makes me feel valued as a customer.\",\n    \"I believe this brand uses my information responsibly.\",\n    \"This email increases my confidence in this brand.\",\n    \"I would be willing to receive more emails like this from the brand.\"\n  )\n)\n\n# Summaries for visualization\ntrust_summary &lt;- trust_clean %&gt;%\n  group_by(condition) %&gt;%\n  summarize(avg_trust = mean(trust_score_avg, na.rm = TRUE))\n\n# Prepare trust items for second visualization\ntrust_items_long &lt;- trust_clean %&gt;%\n  select(condition, starts_with(\"trust_\")) %&gt;%\n  pivot_longer(cols = starts_with(\"trust_\"), names_to = \"item\", values_to = \"score\") %&gt;%\n  left_join(trust_labels, by = \"item\")\n\n# Plotting code omitted for brevity in this report"
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#findings-from-the-data",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#findings-from-the-data",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "The static dashboard revealed several key insights: AI‑personalized emails produced slightly higher average trust scores than the control email. Across all ten trust dimensions, AI‑generated content performed as well as or better than human‑written content. Participants consistently rated the AI email as transparent, accurate, and respectful of their data."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#interpretation-of-the-dashboard",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#interpretation-of-the-dashboard",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "The results suggest that consumers are comfortable with AI‑generated email content and do not perceive it as less trustworthy than human‑written messaging. This supports MEin3D’s strategy to scale personalized communication using AI without risking customer trust."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#published-dashboard-url",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#published-dashboard-url",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "",
-    "text": "https://klee597.github.io/M10/"
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#data-description-1",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#data-description-1",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "Data Description",
-    "text": "Data Description\nThe same MEin3D Trust Survey dataset was used. The interactive app reshapes the data into long format and joins each trust item with its corresponding question text for improved readability."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#key-findings-from-the-interactive-app",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#key-findings-from-the-interactive-app",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "Key Findings from the Interactive App",
-    "text": "Key Findings from the Interactive App\nThe Shiny app provides deeper insight into trust dynamics: Users can compare trust items individually rather than relying on a single composite score. The Distribution Explorer shows that trust scores are consistently high across both conditions. The Summary Table highlights subtle differences between AI and control emails, with AI often performing slightly better."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#interpretation-of-the-interactive-dashboard",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#interpretation-of-the-interactive-dashboard",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "Interpretation of the Interactive Dashboard",
-    "text": "Interpretation of the Interactive Dashboard\nThe interactive tool reinforces the conclusion that AI‑generated email content is perceived as trustworthy and reliable. It also allows stakeholders to explore specific trust dimensions that matter most to MEin3D’s communication strategy."
-  },
-  {
-    "objectID": "W10 Dashboards Assignment — MEin3D Trust Insights.html#shiny-app-url",
-    "href": "W10 Dashboards Assignment — MEin3D Trust Insights.html#shiny-app-url",
-    "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
-    "section": "Shiny App URL",
-    "text": "Shiny App URL\nhttps://krystallovelee.shinyapps.io/m10_assignments/"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome to my Module 10 website for MSDM. I am a Digital Marketing Master’s student at Cal Poly Pomona with a passion for blending creativity, analytics, and audience engagement.\n\n\nI am pursuing a career in integrated marketing within the sports and entertainment industry, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences.\n\n\n\nI bring hands‑on experience across marketing, events, and customer engagement, including:\n\nEvent operations at the Rose Bowl Stadium\nAquatics marketing & HR support at the Rose Bowl Aquatics Center\nBrand ambassador campaigns for Farmer John and Disney x Brooks\nDigital marketing analytics and GA4 reporting\nCreative content development and presentation design\n\nI enjoy turning insights into strategy and crafting meaningful experiences for audiences.\n\n\n\n Connect on LinkedIn\n Email Me"
-  },
-  {
-    "objectID": "index.html#career-aspirations",
-    "href": "index.html#career-aspirations",
-    "title": "Welcome",
-    "section": "",
-    "text": "I am pursuing a career in integrated marketing within the sports and entertainment industry, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences."
-  },
-  {
-    "objectID": "index.html#background-experience",
-    "href": "index.html#background-experience",
-    "title": "Welcome",
-    "section": "",
-    "text": "I bring hands‑on experience across marketing, events, and customer engagement, including:\n\nEvent operations at the Rose Bowl Stadium\nAquatics marketing & HR support at the Rose Bowl Aquatics Center\nBrand ambassador campaigns for Farmer John and Disney x Brooks\nDigital marketing analytics and GA4 reporting\nCreative content development and presentation design\n\nI enjoy turning insights into strategy and crafting meaningful experiences for audiences."
-  },
-  {
-    "objectID": "index.html#lets-connect",
-    "href": "index.html#lets-connect",
-    "title": "Welcome",
-    "section": "",
-    "text": "Connect on LinkedIn\n Email Me"
   },
   {
     "objectID": "Lee, Krystal - W10 Dashboards Assignment — MEin3D Trust Insights.html",
@@ -306,5 +96,89 @@
     "title": "W10 Dashboards Assignment — MEin3D Trust Insights",
     "section": "Shiny App URL",
     "text": "Shiny App URL\nhttps://krystallovelee.shinyapps.io/m10_assignments/"
+  },
+  {
+    "objectID": "dashboard.html",
+    "href": "dashboard.html",
+    "title": "Dashboard",
+    "section": "",
+    "text": "This page showcases the static dashboard I created in Module W10 using Quarto.\nThe goal of this dashboard is to communicate insights from my MSDM CEP project using clear visualizations and audience‑friendly storytelling."
+  },
+  {
+    "objectID": "dashboard.html#static-dashboard",
+    "href": "dashboard.html#static-dashboard",
+    "title": "Dashboard",
+    "section": "",
+    "text": "This page showcases the static dashboard I created in Module W10 using Quarto.\nThe goal of this dashboard is to communicate insights from my MSDM CEP project using clear visualizations and audience‑friendly storytelling."
+  },
+  {
+    "objectID": "dashboard.html#dashboard-code-output",
+    "href": "dashboard.html#dashboard-code-output",
+    "title": "Dashboard",
+    "section": "Dashboard Code & Output",
+    "text": "Dashboard Code & Output\nBelow is the embedded dashboard from my CEP project."
+  },
+  {
+    "objectID": "dashboard.html#trust-item-for-second-visualization",
+    "href": "dashboard.html#trust-item-for-second-visualization",
+    "title": "Dashboard",
+    "section": "📊 Trust Item for Second Visualization",
+    "text": "📊 Trust Item for Second Visualization\n\ntrust_items_long &lt;- trust_clean %&gt;%\n  select(condition, starts_with(\"trust_\")) %&gt;%\n  pivot_longer(cols = starts_with(\"trust_\"), names_to = \"item\", values_to = \"score\") %&gt;%\n  left_join(trust_labels, by = \"item\")"
+  },
+  {
+    "objectID": "dashboard.html#executive-summary---what-this-means-for-mein3d",
+    "href": "dashboard.html#executive-summary---what-this-means-for-mein3d",
+    "title": "Dashboard",
+    "section": "📝 Executive Summary - What This Means for MEin3D",
+    "text": "📝 Executive Summary - What This Means for MEin3D\n\nThe dashboard shows that AI‑generated email content performs on par with human‑written messaging in terms of trust. Customers rate both emails as similarly trustworthy, meaning MEin3D can safely adopt AI‑powered personalization without risking customer confidence. This supports shifting toward automated, scalable email workflows that reduce production time while maintaining strong customer perception."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to my Module 10 website for MSDM. I am a Digital Marketing Master’s student at Cal Poly Pomona with a passion for blending creativity, analytics, and audience engagement.\n\n\nI am pursuing a career in integrated marketing within the sports and entertainment industry, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences.\n\n\n\nI bring hands‑on experience across marketing, events, and customer engagement, including:\n\nEvent operations at the Rose Bowl Stadium\nAquatics marketing & HR support at the Rose Bowl Aquatics Center\nBrand ambassador campaigns for Farmer John and Disney x Brooks\nDigital marketing analytics and GA4 reporting\nCreative content development and presentation design\n\nI enjoy turning insights into strategy and crafting meaningful experiences for audiences.\n\n\n\n Connect on LinkedIn\n Email Me"
+  },
+  {
+    "objectID": "index.html#career-aspirations",
+    "href": "index.html#career-aspirations",
+    "title": "Welcome",
+    "section": "",
+    "text": "I am pursuing a career in integrated marketing within the sports and entertainment industry, where I hope to combine data‑driven strategy, fan engagement, and creative storytelling to elevate brand experiences."
+  },
+  {
+    "objectID": "index.html#background-experience",
+    "href": "index.html#background-experience",
+    "title": "Welcome",
+    "section": "",
+    "text": "I bring hands‑on experience across marketing, events, and customer engagement, including:\n\nEvent operations at the Rose Bowl Stadium\nAquatics marketing & HR support at the Rose Bowl Aquatics Center\nBrand ambassador campaigns for Farmer John and Disney x Brooks\nDigital marketing analytics and GA4 reporting\nCreative content development and presentation design\n\nI enjoy turning insights into strategy and crafting meaningful experiences for audiences."
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Welcome",
+    "section": "",
+    "text": "Connect on LinkedIn\n Email Me"
+  },
+  {
+    "objectID": "shiny-essay.html",
+    "href": "shiny-essay.html",
+    "title": "Essay on Shiny Apps",
+    "section": "",
+    "text": "Shiny is an R package that allows analysts and marketers to build interactive web applications directly from R. Unlike static dashboards, Shiny apps let users explore data dynamically through filters, inputs, and real‑time updates.\n\n\nA Shiny app has two main components:\n\n\nDefines what the user sees:\n\nDropdown menus\n\nSliders\n\nPlots\n\nTables\n\nText outputs\n\n\n\n\nDefines how the app responds:\n\nReads user inputs\n\nRuns R code dynamically\n\nUpdates visualizations in real time\n\nTogether, the UI and server create an interactive experience without requiring JavaScript or web development skills."
+  },
+  {
+    "objectID": "shiny-essay.html#what-is-a-shiny-app",
+    "href": "shiny-essay.html#what-is-a-shiny-app",
+    "title": "Essay on Shiny Apps",
+    "section": "",
+    "text": "A Shiny app has two main components:\n\n\nDefines what the user sees:\n\nDropdown menus\n\nSliders\n\nPlots\n\nTables\n\nText outputs\n\n\n\n\nDefines how the app responds:\n\nReads user inputs\n\nRuns R code dynamically\n\nUpdates visualizations in real time\n\nTogether, the UI and server create an interactive experience without requiring JavaScript or web development skills."
+  },
+  {
+    "objectID": "shiny-essay.html#summary",
+    "href": "shiny-essay.html#summary",
+    "title": "Essay on Shiny Apps",
+    "section": "Summary",
+    "text": "Summary\nShiny apps are ideal when: - You want interactivity - Your audience needs to explore data - You want to build tools without learning JavaScript\nThey are a key skill for modern data‑driven marketing teams."
   }
 ]
