@@ -6,9 +6,7 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - href: "Lee, Krystal-W10 Dashboards Assignment.qmd"
-        text: "W10 Dashboards Assignment"
+        text: Welcome
       - href: dashboard.qmd
         text: Dashboard
       - href: shiny-essay.qmd
